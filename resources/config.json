@@ -1,0 +1,13 @@
+{
+    "bus": {
+        "stats_file": "/tmp/stats.log",
+        "back_off_sec": 1,
+        "num_pop_events": 100,
+        "buffer_size": 10000
+    },
+    "redis": {
+        "address": "localhost:6379",
+        "password": "",
+        "db": 0
+    }
+}

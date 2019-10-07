@@ -1,0 +1,20 @@
+image: golang:1.10
+
+stages:
+  - test
+
+variables:
+  RTK_PATH: "/go/src/rtk.io/"
+  RTK_BUILD_PATH: "/go/src/rtk.io/go-starter-template"
+
+before_script:
+  - mkdir -p $RTK_PATH
+  - cp -R `pwd` $RTK_PATH/
+  - go env
+
+test:
+  stage: test
+  script:
+    - cd $RTK_BUILD_PATH
+    - make test
+
